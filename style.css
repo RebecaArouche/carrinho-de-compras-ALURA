@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.lado-jogador, .lado-robo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    min-height: 25rem;
+}
+
+.lado-jogador {
+    grid-area: jogador;
+}
+
+.lado-robo {
+    grid-area: robo;
+}
+
+.rodape-resultado {
+    grid-area: resultado;
+    text-align: center;
+}
+
+.tela {
+    display: grid;
+    border: 0.8rem solid black;
+    gap: 3rem;
+    padding: 2rem;
+    grid-template-areas: 
+    ". jogador robo ."
+    ". resultado resultado ."
+    ;
+    align-items: center;
+}
+
+.icone {
+    width: 12rem;
+}
+
+.icone-robo {
+    filter: invert(100%);
+    width: 10rem;
+    margin-top: -1.5rem;
+}
+
+.opcao {
+    width: 4rem;
+    height: 6rem;
+    cursor: pointer;
+}
+
+.opcao:hover {
+    border: .1rem solid black;
+    padding: .1rem;
+}
+
+.robo-pedra, .robo-papel, .robo-tesoura {
+    display: none;
+    width: 4rem;
+    height: 6rem;
+}
+
+#pontos-jogador, #pontos-robo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.8rem;
+}
+
+.resultado {
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.opcoes {
+    border: .2rem solid black;
+    padding: .3rem;
+}
+
+.opcoes-robo {
+    border: .2rem solid black;
+    padding: .3rem;
+    width: 15rem; 
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lembrete {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    color: #444;
+    margin-top: 0.4rem;
+    font-weight: normal;
+}
+
+#reset-button {
+    margin-top: 0.8rem;
+    padding: 0.8rem 1.6rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#reset-button:hover {
+    background-color: #555;
+}
